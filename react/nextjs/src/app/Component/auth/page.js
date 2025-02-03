@@ -3,17 +3,11 @@
 import Link from 'next/link';
 import { GiShoppingBag } from 'react-icons/gi';
 import { FiShoppingCart } from 'react-icons/fi';
-import { FaRegHandPaper } from 'react-icons/fa';
 import React from 'react';
 import { Button } from '@nextui-org/react';
 
-const NavbarComponent = () => {
-  const backgroundStyle = {
-    backgroundImage: 'url("https://www.shutterstock.com/image-photo/two-beautiful-woman-fashion-model-600nw-1686853369.jpg")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '100vh',
-  };
+const Auth = () => {
+  
 
   return (
     <div className="relative">
@@ -36,11 +30,11 @@ const NavbarComponent = () => {
               <span className="absolute bottom-0 left-0 w-0 h-1 bg-red-600 transition-all duration-300 group-hover:w-full group-active:w-full group-focus:w-full"></span>
               Men
             </Button>
-            <Button  as={Link} href="/Women" className="text-gray-700 hover:text-blue-600 focus:outline-none transition-all duration-300 relative">
+            <Button  as={Link} href="Women"className="text-gray-700 hover:text-blue-600 focus:outline-none transition-all duration-300 relative">
               <span className="absolute bottom-0 left-0 w-0 h-1 bg-red-600 transition-all duration-300 group-hover:w-full group-active:w-full group-focus:w-full"></span>
               Women
             </Button>
-            <Button  as={Link} href="/Kids" className="text-gray-700 hover:text-blue-600 focus:outline-none transition-all duration-300 relative">
+            <Button as={Link} href="/Kids" className="text-gray-700 hover:text-blue-600 focus:outline-none transition-all duration-300 relative">
               <span className="absolute bottom-0 left-0 w-0 h-1 bg-red-600 transition-all duration-300 group-hover:w-full group-active:w-full group-focus:w-full"></span>
               Kids
             </Button>
@@ -64,26 +58,10 @@ const NavbarComponent = () => {
         </nav>
       </header>
 
-      {/* Background Image and Centered Content */}
-      <div style={backgroundStyle} className="flex flex-col items-center justify-center text-center text-white px-6">
-        <div className="flex items-center space-x-4 mb-4">
-          <h1 className="text-4xl font-bold">NEW ARRIVAL ONLY</h1>
+      
+ </div>
 
-          {/* Icon */}
-          <div className="text-5xl text-yellow-300 hover:text-yellow-400 bg-amber-400 p-2 rounded-full">
-            <FaRegHandPaper />
-          </div>
-        </div>
-
-        <h2 className="text-2xl mb-6">New Collection For Everyone</h2>
-
-        {/* Explore Button */}
-        <Button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">
-          Explore Collection
-        </Button>
-      </div>
-    </div>
   );
 };
 
-export default NavbarComponent;
+export default Auth;
